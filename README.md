@@ -4,51 +4,27 @@
 npm init astro -- --template blog
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/amithgeorge/astro-blog-build-error)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-Features:
+## Issue 
 
-- ✅ SEO-friendly setup with canonical URLs and OpenGraph data
-- ✅ Full Markdown support
-- ✅ RSS 2.0 generation
-- ✅ Sitemap.xml generation
+Running `npm run build` fails with error message 
 
-## 🚀 Project Structure
+```shell
+❯ npm run build
 
-Inside of your Astro project, you'll see the following folders and files:
+> @example/blog@0.0.1 build
+> astro build
 
+11:11 AM [config] Set "buildOptions.site" to generate correct canonical URLs and sitemap
+'pathToFileURL' is not exported by __vite-browser-external, imported by node_modules/astro/dist/runtime/server/index.js
+file: <path>/astro-blog-build-error/node_modules/astro/dist/runtime/server/index.js:33:9
+31: };
+32: import shorthash from "shorthash";
+33: import { pathToFileURL } from "url";
+             ^
+34: import { extractDirectives, generateHydrateScript } from "./hydration.js";
+35: import { serializeListValue } from "./util.js";
+Error: 'pathToFileURL' is not exported by __vite-browser-external, imported by node_modules/astro/dist/runtime/server/index.js
 ```
-/
-├── public/
-│   ├── robots.txt
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Tour.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command           | Action                                       |
-|:----------------  |:-------------------------------------------- |
-| `npm install`     | Installs dependencies                        |
-| `npm run dev`     | Starts local dev server at `localhost:3000`  |
-| `npm run build`   | Build your production site to `./dist/`      |
-| `npm run preview` | Preview your build locally, before deploying |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://github.com/withastro/astro) or jump into our [Discord server](https://astro.build/chat).
