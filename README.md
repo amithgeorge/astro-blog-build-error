@@ -1,5 +1,7 @@
 # Astro Starter Kit: Blog
 
+**NOTE: ** The issue has been fixed in [Astro v0.21.9](https://github.com/withastro/astro/blob/main/packages/astro/CHANGELOG.md#0219) , [PR](https://github.com/withastro/astro/pull/2107). Archiving the repo. 
+
 ```
 npm init astro -- --template blog
 ```
